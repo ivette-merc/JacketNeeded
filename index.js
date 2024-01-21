@@ -11,7 +11,7 @@ console.log("Hello, World!");
 // let firstName = prompt("Enter your first name", "Ivette");
 
 let currentTemp = prompt("What temperature is it?", 60);
-let isRaining = true;
+let isRaining = prompt("Is it raining?", "yes");
 
 const jacketNeeded = (currentTemp) => {
   if (currentTemp <= 29) {
@@ -25,7 +25,19 @@ const jacketNeeded = (currentTemp) => {
   }
 };
 
+function umbrellaNeeded(isRaining) {
+  if (isRaining === "yes") {
+    return `Looks like it's raining, you should take an umbrella`;
+  }
+  if (isRaining === "no") {
+    return `No need for an umbrella!`;
+  } else {
+    return `Hmm, bring an umbrella just incase`;
+  }
+}
+
 console.log(jacketNeeded(currentTemp));
+console.log(umbrellaNeeded(isRaining));
 
 //   const personalGreeting = (firstName, lastName, age, city) => {
 //       return `Hello! My I'm ${firstName} ${lastName}! I’m ${age}yrs old, and I’m from ${city}. Nice to meet you!`;
